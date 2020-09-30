@@ -23,13 +23,13 @@
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7pa-oB-HVH">
                     <rect key="frame" x="298" y="172" width="300" height="70"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="cEl-4e-ETe">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_2" translatesAutoresizingMaskIntoConstraints="NO" id="cEl-4e-ETe">
                             <rect key="frame" x="0.0" y="0.0" width="300" height="70"/>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="cOV-oq-U2o" userLabel="1">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_5" translatesAutoresizingMaskIntoConstraints="NO" id="cOV-oq-U2o" userLabel="1">
                             <rect key="frame" x="0.0" y="0.0" width="300" height="70"/>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="wV2-ME-FfJ" userLabel="2">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_8" translatesAutoresizingMaskIntoConstraints="NO" id="wV2-ME-FfJ" userLabel="2">
                             <rect key="frame" x="0.0" y="0.0" width="300" height="70"/>
                         </imageView>
                     </subviews>
@@ -70,7 +70,8 @@
         </view>
     </objects>
     <resources>
-        <image name="1" width="500" height="707"/>
-        <image name="2" width="400" height="667"/>
+        <image name="image_2" width="400" height="667"/>
+        <image name="image_5" width="532" height="716"/>
+        <image name="image_8" width="510" height="765"/>
     </resources>
 </document>

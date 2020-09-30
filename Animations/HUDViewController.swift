@@ -11,8 +11,9 @@ class HUDViewController: UIViewController {
 
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var first: UIImageView!
+    
     @IBOutlet weak var sec: UIImageView!
-    @IBOutlet weak var third: UIImageView!
+    var images:[UIImage]!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
@@ -20,6 +21,7 @@ class HUDViewController: UIViewController {
     
     func setupUI(){
         self.container.transform = CGAffineTransform.init(rotationAngle: -0.2)
+//        self.first.image = UIImage.init(named: "image_\(2)")
     }
     
     
@@ -27,38 +29,17 @@ class HUDViewController: UIViewController {
         
         self.first.transform = CGAffineTransform.init(translationX: -self.first.bounds.width, y: 0)
         self.sec.transform = CGAffineTransform.init(translationX: -self.sec.bounds.width, y: 0)
-        UIView.animateKeyframes(withDuration: 1, delay: 0, options: [.repeat]) {
-            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.5) {
+        let duration = 2.0
+        let mutiple = 0.8
+        UIView.animateKeyframes(withDuration: duration, delay: 0, options: [.repeat,.calculationModeCubic]) {
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: mutiple/duration) {
                 self.first.transform = CGAffineTransform.identity
             }
-            UIView.addKeyframe(withRelativeStartTime: 0.5 , relativeDuration: 0.5) {
+            UIView.addKeyframe(withRelativeStartTime: 1/duration , relativeDuration: mutiple/duration) {
                 self.sec.transform = CGAffineTransform.identity
             }
         } completion: { (isCompleted) in
             
         }
-
     }
-    
-    func firstStep(){
-        
-        UIView.animate(withDuration: 1) {
-            self.first.transform = CGAffineTransform.identity
-        } completion: { (success) in
-            self.sec.transform = CGAffineTransform.init(translationX: -self.sec.bounds.width, y: 0)
-            self.secondStep()
-        }
-
-    }
-    
-    func secondStep(){
-        
-        UIView.animate(withDuration: 1) {
-            self.sec.transform = CGAffineTransform.identity
-        } completion: { (success) in
-            self.first.transform = CGAffineTransform.init(translationX: -self.first.bounds.width, y: 0)
-            self.firstStep()
-        }
-    }
-    
 }
